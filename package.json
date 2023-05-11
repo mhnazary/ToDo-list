@@ -1,7 +1,7 @@
 {
   "name": "todo-list",
   "version": "1.0.0",
-  "description": "",
+  "description": "Create with the aim of mentioning one of the thematics of events that I like the most that is that of the video games and using all my knowledge in the first module of the program microverse to give it form and functionality.",
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -13,10 +13,19 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "babel-eslint": "^10.1.0",
     "css-loader": "^6.7.3",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.27.5",
     "express": "^4.18.2",
+    "hint": "^7.1.8",
     "html-webpack-plugin": "^5.5.1",
     "style-loader": "^3.3.2",
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^21.0.0",
+    "stylelint-csstree-validator": "^1.9.0",
+    "stylelint-scss": "^3.21.0",
     "webpack": "^5.82.1",
     "webpack-cli": "^5.1.1",
     "webpack-dev-middleware": "^6.1.0",
@@ -24,5 +33,6 @@
   },
   "dependencies": {
     "lodash": "^4.17.21"
-  }
+  },
+  "main": "webpack.config.js"
 }
