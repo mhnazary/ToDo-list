@@ -1,8 +1,6 @@
 import { setTasks, getTasks } from './storage.js';
 import addTask from './add.js';
 import removeTask from './remove.js';
-import clearCompletedTasks from './clearChecked.js';
-import checkboxToggle from './checkboxToggle.js';
 
 const render = () => {
   const tasks = getTasks();
@@ -18,11 +16,7 @@ const render = () => {
   headingContainer.appendChild(refreshIcon);
   listContainer.appendChild(headingContainer);
   refreshIcon.addEventListener('click', () => {
-    refreshIcon.classList.add('rotate');
-    setTimeout(() => {
-      refreshIcon.classList.remove('rotate');
-      render();
-    }, 2000);
+    render();
   });
 
   // Add task input field
@@ -68,7 +62,9 @@ const render = () => {
 
     // Checkbox
 
-    const checkbox = checkboxToggle(task, tasks, render);
+    const checkbox = document.createElement('input');
+    checkbox.classList.add('checkbox');
+    checkbox.type = 'checkbox';
     listItem.appendChild(checkbox);
 
     // Remove Button
@@ -119,17 +115,12 @@ const render = () => {
 
   // Clear button
 
-  const clearBtn = document.createElement('button');
-  clearBtn.classList.add('clear-btn');
-  clearBtn.setAttribute('id', 'clear-all');
-  clearBtn.textContent = 'Clear completed tasks';
+  const clearButton = document.createElement('button');
+  clearButton.classList.add('clear-btn');
+  clearButton.textContent = 'Clear completed tasks';
   const lastListItem = document.createElement('li');
-  clearBtn.addEventListener('click', () => {
-    clearCompletedTasks(tasks);
-    render(tasks);
-  });
   lastListItem.classList.add('clear-btn-container');
-  lastListItem.appendChild(clearBtn);
+  lastListItem.appendChild(clearButton);
   listContainer.appendChild(lastListItem);
 };
 
