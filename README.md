@@ -9,7 +9,7 @@ Will have future changes in the next days!!!
 
 <div align="center">
 
-  <h3 id="title"><b>Awesome Books</b></h3>
+  <h3 id="title"><b> Awesome Books </b></h3>
 
 </div>
 
