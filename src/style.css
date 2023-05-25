@@ -37,7 +37,7 @@ body {
 
 body {
   font-family: 'Open Sans', sans-serif;
-  background: linear-gradient(to bottom, #d7d2cc, #304352);
+  background: linear-gradient(to bottom, #f4f1ee, #abb2b7);
   display: flex;
   flex-direction: column;
   justify-content: center;

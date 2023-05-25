@@ -73,4 +73,30 @@ describe('addTask', () => {
     expect(addListInput.children[0].tagName).toBe('BUTTON');
     expect(addListInput.children[1].value.trim()).toBe(description);
   });
+
+  it('should remove exactly one <li> element from the list in the DOM', () => {
+    document.body.innerHTML = `
+      <ul id="task-list">
+      </ul>
+    `;
+    const container = document.getElementById('task-list');
+    const addListInput = document.createElement('li');
+    const inputField = document.createElement('textarea');
+    const removeBtn = document.createElement('button');
+    removeBtn.textContent = 'Remove';
+    addListInput.appendChild(inputField);
+    addListInput.appendChild(removeBtn);
+    container.appendChild(addListInput);
+    const task1Description = 'Test task 1';
+    addTask(task1Description);
+    inputField.value = task1Description;
+    const task2Description = 'Test task 2';
+    addTask(task2Description);
+    inputField.value = task2Description;
+    removeTask(0);
+    const liElement = container.children[0];
+    expect(liElement.tagName).toBe('LI');
+    const textareaElement = liElement.querySelector('textarea');
+    expect(textareaElement.value).toBe(task2Description);
+  });
 });
