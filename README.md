@@ -7,6 +7,14 @@ Will have future changes in the next days!
 <a name="readme-top"></a>
 
 
+<div align="center">
+
+  <h3 id="title"><b>Awesome Books</b></h3>
+
+</div>
+
+
+
 # 📗 Table of Contents
 
 - [📖 About the Project](#about-project)
@@ -34,15 +42,12 @@ Will have future changes in the next days!
 # 📖 to-do-list <a name="about-project"></a>
 
 > Testing all the information learned in the course in the areas of HTML, CSS and JS to achieve the results shown..
-> A todo list app designed to list a task to be done . Users can add new task, delete completed ones, and make edit if the task needs to be changed. Built with JavaScript ,html, CSS and Webpack. And tested with jest"
 > You can watch this video of me commenting on my first advances in creating this web page and how I felt in the process and the Features I added. 
-
 
 ## 🛠 Built With <a name="built-with"></a>
 
 - HTML
 - JS
-- css
 
 ### Tech Stack <a name="tech-stack"></a>
 
